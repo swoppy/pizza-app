@@ -4,6 +4,8 @@ import { RadioButton } from '../../ui/base/button/radio/Radio';
 import text from './text';
 import { InputChangeEvent } from '../../ui/types/events';
 import { Label } from '../../ui/base/label/Label';
+import { Link } from '../../ui/base/link/link';
+import { BaseRoute } from '../../ui/routes/paths';
 
 export const Size = () => {
   const [state, setState] = React.useState({
@@ -41,7 +43,9 @@ export const Size = () => {
         >
           <Label text={text.large()}/>
         </RadioButton>
-        <button>OK</button>
+        <Link path={{ route: BaseRoute.CRUST }}>
+          <button>OK</button>
+        </Link>
       </div>
       <div>
 
